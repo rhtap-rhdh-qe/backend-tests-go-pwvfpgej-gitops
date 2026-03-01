@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: backend-tests-go-pwvfpgej
+  janus-idp.io/tekton: backend-tests-go-pwvfpgej
+  backstage.io/kubernetes-id: backend-tests-go-pwvfpgej
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-go-pwvfpgej
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
